@@ -1,13 +1,23 @@
 {
   "name": "@oneline/ui-taro",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.3",
   "description": "",
   "templateInfo": {
     "name": "default",
     "typescript": true,
     "css": "sass"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "browser": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
@@ -26,7 +36,11 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
+    "build:rollup": "rollup --config ./rollup.config.js",
+    "build:lib": "tsc --project ./tsconfig.build.json",
+    "prepublish": "npm run build:rollup"
   },
   "browserslist": [
     "last 3 versions",
@@ -36,28 +50,41 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@oneline/style": "0.0.19",
+    "@oneline/svg": "0.0.1",
     "@tarojs/components": "3.0.2",
+    "@tarojs/extend": "^3.0.2",
+    "@tarojs/react": "3.0.2",
     "@tarojs/runtime": "3.0.2",
     "@tarojs/taro": "3.0.2",
-    "@tarojs/react": "3.0.2",
-    "react-dom": "^16.10.0",
-    "react": "^16.10.0"
+    "classnames": "^2.2.6",
+    "cross-env": "^7.0.2",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.6",
-    "@types/react": "^16.0.0",
-    "@tarojs/mini-runner": "3.0.2",
     "@babel/core": "^7.8.0",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@tarojs/mini-runner": "3.0.2",
     "@tarojs/webpack-runner": "3.0.2",
-    "babel-preset-taro": "3.0.2",
-    "eslint-config-taro": "3.0.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "stylelint": "9.3.0",
-    "@typescript-eslint/parser": "^2.x",
+    "@types/react": "^16.0.0",
+    "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^2.x",
+    "@typescript-eslint/parser": "^2.x",
+    "babel-preset-taro": "3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-taro": "3.0.2",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "rollup": "^2.16.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-visualizer": "^4.0.4",
+    "stylelint": "9.3.0",
     "typescript": "^3.7.0"
   }
 }

@@ -1,0 +1,17 @@
+.ol-taro-date__active{
+  position: relative;
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background: #4d79f6;
+    color: #fff; 
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

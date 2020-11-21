@@ -1,3 +1,4 @@
+import {resolve} from 'path';
 const config = {
   projectName: '@oneline/ui-taro',
   date: '2020-7-5',
@@ -11,6 +12,9 @@ const config = {
   outputRoot: 'dist',
   plugins: [],
   defineConstants: {
+  },
+  alias: {
+    '~': resolve(__dirname, '..', './src')
   },
   copy: {
     patterns: [

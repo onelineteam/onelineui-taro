@@ -1,0 +1,160 @@
+.ol-popover {
+  background:rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  .ol-popover__arrow {
+
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    z-index: 9;
+    overflow: hidden;
+    left: -52px;
+    top: 0;
+    &:after {
+      content: '';
+      background: #fff;
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 6px;
+      transform: rotate(45deg);
+    }
+
+
+    &.on-t {
+      bottom: -50px;
+      left: 50%;
+      top: auto;
+      transform: translateX(-50%);
+      &:after {
+        top: -38px;
+        left: 0;
+      }
+    }
+
+    &.on-tl {
+      bottom: -50px;
+      left: 22px;
+      top: auto;
+      transform: translateX(0);
+      &:after {
+        top: -38px;
+        left: 0;
+      }
+    }
+
+    &.on-tr {
+      bottom: -50px;
+      right: 22px;
+      top: auto;
+      left: auto;
+      transform: translateX(0);
+      &:after {
+        top: -38px;
+        left: 0;
+      }
+    }
+
+    &.on-b {
+      top: -52px;
+      left: 50%;
+      transform: translateX(-50%);
+      &:after {
+        top: 38px;
+        left: 0;
+      }
+    }
+
+
+    &.on-bl {
+      top: -52px;
+      left: 22px;
+      transform: translateX(0);
+      &:after {
+        top: 38px;
+        left: 0;
+      }
+    }
+
+
+    &.on-br {
+      top: -52px;
+      left: auto;
+      right: 22px;
+      transform: translateX(0);
+      &:after {
+        top: 38px;
+        left: 0;
+      }
+    }
+
+
+
+    &.on-l {
+      top: 50%;
+      left: auto;
+      right: -52px;
+      transform: translateY(-50%);
+      &:after {
+        top: 0;
+        left: -38px;
+      }
+    }
+    &.on-lt {
+      top: 22px;
+      left: auto;
+      right: -52px; 
+      &:after {
+        top: 0;
+        left: -38px;
+      }
+    }
+    &.on-lb {
+      top: auto;
+      left: auto;
+      right: -52px;
+      bottom: 22px;
+      &:after {
+        top: 0;
+        left: -38px;
+      }
+    }
+
+
+    &.on-r {
+      top: 50%;
+      left: -52px;
+      transform: translateY(-50%);
+      &:after {
+        top: 0;
+        left: 38px;
+      }
+    }
+    &.on-rt {
+      top: 22px; 
+      left: -52px; 
+      &:after {
+        top: 0;
+        left: 38px;
+      }
+    }
+    &.on-rb {
+      top: auto; 
+      left: -52px;
+      bottom: 22px;
+      &:after {
+        top: 0;
+        left: 38px;
+      }
+    }
+
+
+
+
+  }
+
+
+  
+}

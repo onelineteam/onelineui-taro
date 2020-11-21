@@ -1,0 +1,34 @@
+.ol-btn {
+  height: 37px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px 26px;
+  background: #18171a;
+  border-radius: 2px;
+  border: #18171a 1px solid;
+  &:hover {
+    background: #252427; 
+  }
+}
+
+.ol-btn-o {
+  height: 37px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px 26px;
+  background: #fff;
+  border-radius: 2px;
+  color: #18171a;
+  border: #18171a 1px solid;
+}
+
+.ol-btn-o:hover {
+    background: #18171a;
+    color: #fff;
+}

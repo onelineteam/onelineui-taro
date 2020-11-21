@@ -45,6 +45,7 @@ export default class PopoverDemo extends Component {
     e.preventDefault();
 
     const query = Taro.createSelectorQuery();
+    console.log(e.currentTarget.id)
     query.select('#' + e.currentTarget.id).boundingClientRect().selectViewport().scrollOffset().exec(result => {
     
       const res = result[0];

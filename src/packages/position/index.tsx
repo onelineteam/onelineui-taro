@@ -32,6 +32,7 @@ export default class Position extends Component<PositionProps, PositionState> {
 
       Taro.nextTick(() => {
         const query = Taro.createSelectorQuery();
+        console.log(this.state._id)
         query.select(`#${this.state._id}`).boundingClientRect(rect => {
           this.props.onRect && this.props.onRect(rect);
         }).exec();

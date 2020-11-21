@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro';
 import './index.scss'
-import Navigation from '~/packages/navigation';
-import Icon from '~/packages/icon';
 
 export default class Index extends Component {
 
@@ -40,6 +38,32 @@ export default class Index extends Component {
             <View className='ol-cell__bd'>Navigation</View>
             <View className='ol-cell__ft'></View>
           </View>
+
+        </View>
+
+        <View className='ol-cells__title'>Form (not start)</View>
+        <View className="ol-cells">
+
+          <View className='ol-cell ol-cell__access' onClick={this.go.bind(this, 'input')}>
+            <View className='ol-cell__bd'>Input</View>
+            <View className='ol-cell__ft'></View>
+          </View>
+
+          <View className='ol-cell ol-cell__access' onClick={this.go.bind(this, 'button')}>
+            <View className='ol-cell__bd'>Button</View>
+            <View className='ol-cell__ft'></View>
+          </View>
+
+          <View className='ol-cell ol-cell__access' onClick={this.go.bind(this, 'check')}>
+            <View className='ol-cell__bd'>Checkbox</View>
+            <View className='ol-cell__ft'></View>
+          </View>
+
+          <View className='ol-cell ol-cell__access' onClick={this.go.bind(this, 'radio')}>
+            <View className='ol-cell__bd'>Radio</View>
+            <View className='ol-cell__ft'></View>
+          </View>
+
 
         </View>
 

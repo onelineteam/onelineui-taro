@@ -4,8 +4,11 @@ import Input from '~/packages/input/input';
 export default class Index extends Component {
   
     render() {
+        const leftClick = () => {
+            console.log("helloo")
+        }
         return <View>
-            <Input></Input>
+            <Input affix={{left: [{name: 'location', action: leftClick}], right: []}}></Input>
         </View>
     }
 }
